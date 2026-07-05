@@ -193,7 +193,7 @@ function App() {
         <div className="contact-container">
           <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
             {/* Sustituir YOUR_ACCESS_KEY_HERE por la real que proporcione Web3Forms para InverCapital */}
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="access_key" value="f4961f0d-7121-41d5-b5c6-8b84579abcf4" />
             <input type="hidden" name="subject" value="Nuevo Lead - InverCapital" />
             <input type="hidden" name="from_name" value="InverCapital Landing Page" />
             
