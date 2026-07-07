@@ -10,9 +10,10 @@ function App() {
         </a>
         <div className="nav-links">
           <a href="#inicio">Inicio</a>
-          <a href="#remates">Ventajas</a>
-          <a href="#casos">Casos de Éxito</a>
+          <a href="#inversiones">¿En qué invertimos?</a>
+          <a href="#propuesta">Propuesta de Valor</a>
           <a href="#nosotros">Nosotros</a>
+          <a href="#casos">Oportunidades</a>
           <a href="#contacto">Contacto</a>
         </div>
       </nav>
@@ -23,53 +24,73 @@ function App() {
         </div>
         <div className="hero-overlay"></div>
         <div className="hero-content fade-in">
-          <h1 className="hero-title">Inversiones Inteligentes en <span>Remates Judiciales</span></h1>
+          <span className="hero-tag">INVERSIÓN INMOBILIARIA ESTRATÉGICA</span>
+          <h1 className="hero-title">HACEMOS QUE TU CAPITAL GENERE <span>VALOR REAL</span></h1>
           <p className="hero-desc">
-            Maximizamos el rendimiento de su capital accediendo a oportunidades inmobiliarias exclusivas de alto valor por debajo del precio de mercado.
+            Transformamos oportunidades judiciales e inmobiliarias en inversiones estratégicas, seguras y rentables.
           </p>
           <div className="hero-actions">
-            <a href="#casos" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Descubrir Oportunidades</a>
-            <a href="#contacto" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Agendar Asesoría</a>
+            <a href="#contacto" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', background: 'linear-gradient(135deg, #181b21 0%, #0a0c10 100%)', color: 'var(--accent-gold)', border: '1px solid var(--accent-gold)' }}>Agendar Asesoría</a>
           </div>
         </div>
       </section>
 
-      <section className="features" id="remates">
+      <section className="features" id="inversiones" style={{ background: 'var(--bg-panel)' }}>
         <div className="section-header">
-          <span className="section-subtitle">NUESTRA VENTAJA</span>
-          <h2 className="section-title">¿Por qué invertir con nosotros?</h2>
+          <span className="section-subtitle">PORTAFOLIO</span>
+          <h2 className="section-title">¿EN QUÉ INVERTIMOS?</h2>
         </div>
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon">
-              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3v18" />
-                <path d="M3 7h18" />
-                <path d="M6 7l-3 7a3 3 0 0 0 6 0l-3-7z" />
-                <path d="M18 7l-3 7a3 3 0 0 0 6 0l-3-7z" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 21v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8M3 11l9-9 9 9"/></svg>
             </div>
             <h3 className="feature-title">Remates Judiciales</h3>
-            <p className="feature-desc">Acceso directo a propiedades en proceso de remate judicial con descuentos de hasta un 50% sobre el valor comercial de mercado.</p>
+            <p className="feature-desc">Oportunidades inmobiliarias provenientes de procesos judiciales.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">
-              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <h3 className="feature-title">Seguridad Jurídica</h3>
-            <p className="feature-desc">Nuestro equipo de abogados especialistas garantiza un proceso transparente y libre de riesgos desde la adquisición hasta la toma de posesión.</p>
+            <h3 className="feature-title">Carteras Judiciales</h3>
+            <p className="feature-desc">Adquisición de activos con potencial de recuperación.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">
-              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
-            <h3 className="feature-title">Alta Rentabilidad</h3>
-            <p className="feature-desc">Estrategias de inversión diseñadas para generar retornos extraordinarios a corto y mediano plazo en el sector inmobiliario y de remates.</p>
+            <h3 className="feature-title">Deudas Hipotecarias</h3>
+            <p className="feature-desc">Inversiones respaldadas por garantías inmobiliarias.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="features" id="propuesta">
+        <div className="section-header">
+          <span className="section-subtitle">NUESTRA PROPUESTA DE VALOR</span>
+          <h2 className="section-title">¿POR QUÉ INVERTIR CON INVERCAPITAL?</h2>
+        </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 className="feature-title">Oportunidades Estratégicas</h3>
+            <p className="feature-desc">Identificamos inmuebles y activos judiciales con alto potencial, buscando oportunidades por debajo de su valor de mercado.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+            </div>
+            <h3 className="feature-title">Gestión Especializada</h3>
+            <p className="feature-desc">Más de 10 años de experiencia gestionando procesos judiciales con análisis, acompañamiento y transparencia en cada etapa.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+            </div>
+            <h3 className="feature-title">Rentabilidad Inteligente</h3>
+            <p className="feature-desc">Diseñamos alternativas de inversión enfocadas en proteger tu capital y maximizar su crecimiento.</p>
           </div>
         </div>
       </section>
@@ -79,25 +100,25 @@ function App() {
           <img src="/concept.jpg" alt="Investment Concept" />
         </div>
         <div className="concept-content">
-          <h2>Transformando el Acceso a Activos Inmobiliarios</h2>
+          <h2>TRANSFORMAMOS OPORTUNIDADES EN PATRIMONIO</h2>
           <p>
-            InverCapital nace con el objetivo de democratizar el acceso a las oportunidades más rentables del mercado inmobiliario, tradicionalmente reservadas para grandes fondos de inversión y corporaciones.
+            InverCapital nace para identificar oportunidades inmobiliarias únicas a través de remates judiciales y adquisición de carteras judiciales con alto potencial de recuperación.
           </p>
           <p>
-            Operamos como un nexo especializado entre inversores estratégicos y propiedades de alto potencial, gestionando todo el ciclo de inversión con absoluta discreción, agilidad y profesionalismo.
+            Analizamos, gestionamos y acompañamos cada inversión con experiencia y transparencia, buscando proteger tu capital y generar resultados reales.
           </p>
-          <div className="stats">
+          <div className="stats" style={{ gap: '2rem' }}>
             <div className="stat-item">
-              <h3>$25M+</h3>
-              <p>Capital Gestionado</p>
+              <h3>+10 años</h3>
+              <p>EXPERIENCIA EN PROCESOS JUDICIALES</p>
             </div>
             <div className="stat-item">
-              <h3>30%+</h3>
-              <p>Retorno Promedio</p>
+              <h3>45%</h3>
+              <p>MENOS DEL VALOR DE MERCADO</p>
             </div>
             <div className="stat-item">
-              <h3>150+</h3>
-              <p>Propiedades Adjudicadas</p>
+              <h3>360°</h3>
+              <p>ACOMPAÑAMIENTO PERSONALIZADO</p>
             </div>
           </div>
         </div>
@@ -106,79 +127,39 @@ function App() {
       <section className="properties-section" id="casos">
         <div className="section-header">
           <span className="section-subtitle">CASOS DE ÉXITO</span>
-          <h2 className="section-title">Propiedades Destacadas</h2>
+          <h2 className="section-title">OPORTUNIDADES GESTIONADAS</h2>
         </div>
-        <div className="properties-grid">
+        <div className="properties-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           <div className="property-card">
             <div className="property-image">
-              <div className="property-badge">Remate Judicial</div>
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casa en San Isidro" />
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Departamento Miraflores" />
             </div>
-            <div className="property-content">
-              <h3>Residencia en San Isidro</h3>
-              <p className="property-location">Lima, Perú</p>
-              <div className="property-financials">
-                <div className="fin-item">
-                  <span>Valor Comercial</span>
-                  <span className="strike">$ 450,000</span>
-                </div>
-                <div className="fin-item highlight">
-                  <span>Precio Adjudicación</span>
-                  <span>$ 265,000</span>
-                </div>
-              </div>
-              <p className="property-roi">Rentabilidad Proyectada: <span>41%</span></p>
+            <div className="property-content" style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Departamento Miraflores</h3>
             </div>
           </div>
-
           <div className="property-card">
             <div className="property-image">
-              <div className="property-badge">Cartera Bancaria</div>
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dúplex en Miraflores" />
+              <img src="https://images.unsplash.com/photo-1555529902-5261145633bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mercado San Juan de Miraflores" />
             </div>
-            <div className="property-content">
-              <h3>Dúplex en Miraflores</h3>
-              <p className="property-location">Lima, Perú</p>
-              <div className="property-financials">
-                <div className="fin-item">
-                  <span>Valor Comercial</span>
-                  <span className="strike">$ 320,000</span>
-                </div>
-                <div className="fin-item highlight">
-                  <span>Precio Adjudicación</span>
-                  <span>$ 195,000</span>
-                </div>
-              </div>
-              <p className="property-roi">Rentabilidad Proyectada: <span>39%</span></p>
+            <div className="property-content" style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Mercado San Juan de Miraflores</h3>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="testimonials-section" id="testimonios">
-        <div className="section-header">
-          <span className="section-subtitle">CONFIANZA</span>
-          <h2 className="section-title">Lo que dicen nuestros inversores</h2>
-        </div>
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <div className="quote-icon">"</div>
-            <p className="testimonial-text">InverCapital me brindó la seguridad legal que necesitaba para entrar al mercado de remates. El proceso fue transparente y la rentabilidad superó mis expectativas.</p>
-            <div className="testimonial-author">
-              <div className="author-info">
-                <h4>Carlos Mendoza</h4>
-                <p>Inversor Privado</p>
-              </div>
+          <div className="property-card">
+            <div className="property-image">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local Industrial Lurin" />
+            </div>
+            <div className="property-content" style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Local Industrial Lurin</h3>
             </div>
           </div>
-          <div className="testimonial-card">
-            <div className="quote-icon">"</div>
-            <p className="testimonial-text">Su equipo legal se encargó de todo. Yo solo tuve que aportar el capital y en 8 meses obtuvimos un retorno neto del 35% tras la venta del inmueble.</p>
-            <div className="testimonial-author">
-              <div className="author-info">
-                <h4>Lucía Fernández</h4>
-                <p>Empresaria</p>
-              </div>
+          <div className="property-card">
+            <div className="property-image">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casa Surco" />
+            </div>
+            <div className="property-content" style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Casa Surco</h3>
             </div>
           </div>
         </div>
@@ -187,11 +168,10 @@ function App() {
       <section className="contact-section" id="contacto">
         <div className="section-header">
           <span className="section-subtitle">CONTÁCTENOS</span>
-          <h2 className="section-title">Inicie su Inversión Hoy</h2>
+          <h2 className="section-title">CONSTRUYAMOS TU PRÓXIMA INVERSIÓN</h2>
         </div>
         <div className="contact-container">
           <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            {/* Sustituir YOUR_ACCESS_KEY_HERE por la real que proporcione Web3Forms para InverCapital */}
             <input type="hidden" name="access_key" value="f4961f0d-7121-41d5-b5c6-8b84579abcf4" />
             <input type="hidden" name="subject" value="Nuevo Lead - InverCapital" />
             <input type="hidden" name="from_name" value="InverCapital Landing Page" />
@@ -205,8 +185,6 @@ function App() {
               <label htmlFor="email">Correo Electrónico</label>
               <input type="email" id="email" name="email" required placeholder="juan@ejemplo.com" />
             </div>
-            
-
             
             <div className="form-group">
               <label htmlFor="message">Mensaje o Consulta</label>
@@ -225,13 +203,14 @@ function App() {
               <img src="/isotipo-removebg-preview.png" alt="InverCapital Logo" className="logo-icon" />
               INVER<span>CAPITAL</span>
             </a>
-            <p>El nexo definitivo entre su capital y las mejores oportunidades del mercado inmobiliario y remates judiciales.</p>
+            <p>Especialistas en inversión inmobiliaria estratégica, enfocada en remates judiciales y adquisición de carteras judiciales con alto potencial de rentabilidad.</p>
           </div>
           <div className="footer-col">
             <h4>Enlaces Rápidos</h4>
             <ul>
               <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#casos">Casos de Éxito</a></li>
+              <li><a href="#inversiones">Inversiones</a></li>
+              <li><a href="#casos">Oportunidades</a></li>
               <li><a href="#nosotros">Nosotros</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -239,8 +218,9 @@ function App() {
           <div className="footer-col">
             <h4>Contacto</h4>
             <ul>
-              <li>info@invercapital.com</li>
-              <li>Torre Financiera, Piso 18</li>
+              <li>contacto@invercapital.pe</li>
+              <li>Av. Mariscal la Mar 1263, Miraflores</li>
+              <li>Lima, Perú</li>
             </ul>
           </div>
         </div>
