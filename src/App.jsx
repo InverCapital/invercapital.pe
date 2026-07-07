@@ -23,14 +23,13 @@ function App() {
         </div>
         <div className="hero-overlay"></div>
         <div className="hero-content fade-in">
-          <span className="hero-tag">El Nexo Inmobiliario</span>
           <h1 className="hero-title">Inversiones Inteligentes en <span>Remates Judiciales</span></h1>
           <p className="hero-desc">
             Maximizamos el rendimiento de su capital accediendo a oportunidades inmobiliarias exclusivas de alto valor por debajo del precio de mercado.
           </p>
           <div className="hero-actions">
-            <button className="btn-primary">Descubrir Oportunidades</button>
-            <button className="btn-outline">Agendar Asesoría</button>
+            <a href="#casos" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Descubrir Oportunidades</a>
+            <a href="#contacto" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Agendar Asesoría</a>
           </div>
         </div>
       </section>
