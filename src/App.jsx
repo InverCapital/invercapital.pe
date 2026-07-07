@@ -1,12 +1,20 @@
 import React from 'react'
 
 function App() {
+  const scrollContainer = React.useRef(null);
+  const scroll = (direction) => {
+    if (scrollContainer.current) {
+      const scrollAmount = window.innerWidth > 768 ? 350 : 280;
+      scrollContainer.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
         <a href="#inicio" className="logo">
           <img src="/isotipo-removebg-preview.png" alt="InverCapital Logo" className="logo-icon" />
-          INVER<span>CAPITAL</span>
+          INVERCAPITAL
         </a>
         <div className="nav-links">
           <a href="#inicio">Inicio</a>
@@ -129,39 +137,43 @@ function App() {
           <span className="section-subtitle">CASOS DE ÉXITO</span>
           <h2 className="section-title">OPORTUNIDADES GESTIONADAS</h2>
         </div>
-        <div className="properties-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-          <div className="property-card">
-            <div className="property-image">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Departamento Miraflores" />
+        <div className="carousel-wrapper">
+          <button onClick={() => scroll('left')} className="carousel-btn left" aria-label="Anterior">&#8249;</button>
+          <div className="properties-grid" ref={scrollContainer}>
+            <div className="property-card">
+              <div className="property-image">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Departamento Miraflores" />
+              </div>
+              <div className="property-content" style={{ padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Departamento Miraflores</h3>
+              </div>
             </div>
-            <div className="property-content" style={{ padding: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Departamento Miraflores</h3>
+            <div className="property-card">
+              <div className="property-image">
+                <img src="https://images.unsplash.com/photo-1555529902-5261145633bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mercado San Juan de Miraflores" />
+              </div>
+              <div className="property-content" style={{ padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Mercado San Juan de Miraflores</h3>
+              </div>
+            </div>
+            <div className="property-card">
+              <div className="property-image">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local Industrial Lurin" />
+              </div>
+              <div className="property-content" style={{ padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Local Industrial Lurin</h3>
+              </div>
+            </div>
+            <div className="property-card">
+              <div className="property-image">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casa Surco" />
+              </div>
+              <div className="property-content" style={{ padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Casa Surco</h3>
+              </div>
             </div>
           </div>
-          <div className="property-card">
-            <div className="property-image">
-              <img src="https://images.unsplash.com/photo-1555529902-5261145633bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mercado San Juan de Miraflores" />
-            </div>
-            <div className="property-content" style={{ padding: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Mercado San Juan de Miraflores</h3>
-            </div>
-          </div>
-          <div className="property-card">
-            <div className="property-image">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local Industrial Lurin" />
-            </div>
-            <div className="property-content" style={{ padding: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Local Industrial Lurin</h3>
-            </div>
-          </div>
-          <div className="property-card">
-            <div className="property-image">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casa Surco" />
-            </div>
-            <div className="property-content" style={{ padding: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Casa Surco</h3>
-            </div>
-          </div>
+          <button onClick={() => scroll('right')} className="carousel-btn right" aria-label="Siguiente">&#8250;</button>
         </div>
       </section>
 
@@ -201,7 +213,7 @@ function App() {
           <div className="footer-col">
             <a href="#inicio" className="logo">
               <img src="/isotipo-removebg-preview.png" alt="InverCapital Logo" className="logo-icon" />
-              INVER<span>CAPITAL</span>
+              INVERCAPITAL
             </a>
             <p>Especialistas en inversión inmobiliaria estratégica, enfocada en remates judiciales y adquisición de carteras judiciales con alto potencial de rentabilidad.</p>
           </div>
