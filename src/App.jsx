@@ -1,7 +1,32 @@
 import React from 'react'
 
 function App() {
+  const properties = [
+    { img: "/departamento_miraflores.jpeg", title: "Departamento Miraflores" },
+    { img: "/mercado_san_juan_miraflores.jpeg", title: "Mercado San Juan de Miraflores" },
+    { img: "/terreno_comercial_lurin.jpeg", title: "Local Industrial Lurin" },
+    { img: "/casa_surco.jpeg", title: "Casa Surco" }
+  ];
+  // Cuadruplicamos los items para que se sienta infinito
+  const carouselItems = [...properties, ...properties, ...properties, ...properties];
+
   const scrollContainer = React.useRef(null);
+  
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollContainer.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.current;
+        if (scrollLeft + clientWidth >= scrollWidth - 20) {
+          scrollContainer.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          const scrollAmount = window.innerWidth > 768 ? 350 : 280;
+          scrollContainer.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   const scroll = (direction) => {
     if (scrollContainer.current) {
       const scrollAmount = window.innerWidth > 768 ? 350 : 280;
@@ -140,38 +165,16 @@ function App() {
         <div className="carousel-wrapper">
           <button onClick={() => scroll('left')} className="carousel-btn left" aria-label="Anterior">&#8249;</button>
           <div className="properties-grid" ref={scrollContainer}>
-            <div className="property-card">
-              <div className="property-image">
-                <img src="/departamento_miraflores.jpeg" alt="Departamento Miraflores" />
+            {carouselItems.map((item, idx) => (
+              <div className="property-card" key={idx}>
+                <div className="property-image">
+                  <img src={item.img} alt={item.title} />
+                </div>
+                <div className="property-content" style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>{item.title}</h3>
+                </div>
               </div>
-              <div className="property-content" style={{ padding: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Departamento Miraflores</h3>
-              </div>
-            </div>
-            <div className="property-card">
-              <div className="property-image">
-                <img src="/mercado_san_juan_miraflores.jpeg" alt="Mercado San Juan de Miraflores" />
-              </div>
-              <div className="property-content" style={{ padding: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Mercado San Juan de Miraflores</h3>
-              </div>
-            </div>
-            <div className="property-card">
-              <div className="property-image">
-                <img src="/terreno_comercial_lurin.jpeg" alt="Local Industrial Lurin" />
-              </div>
-              <div className="property-content" style={{ padding: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Local Industrial Lurin</h3>
-              </div>
-            </div>
-            <div className="property-card">
-              <div className="property-image">
-                <img src="/casa_surco.jpeg" alt="Casa Surco" />
-              </div>
-              <div className="property-content" style={{ padding: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Casa Surco</h3>
-              </div>
-            </div>
+            ))}
           </div>
           <button onClick={() => scroll('right')} className="carousel-btn right" aria-label="Siguiente">&#8250;</button>
         </div>
