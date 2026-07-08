@@ -142,7 +142,7 @@ function App() {
           <div className="properties-grid" ref={scrollContainer}>
             <div className="property-card">
               <div className="property-image">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Departamento Miraflores" />
+                <img src="/departamento_miraflores.jpeg" alt="Departamento Miraflores" />
               </div>
               <div className="property-content" style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Departamento Miraflores</h3>
@@ -150,7 +150,7 @@ function App() {
             </div>
             <div className="property-card">
               <div className="property-image">
-                <img src="https://images.unsplash.com/photo-1555529902-5261145633bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mercado San Juan de Miraflores" />
+                <img src="/mercado_san_juan_miraflores.jpeg" alt="Mercado San Juan de Miraflores" />
               </div>
               <div className="property-content" style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Mercado San Juan de Miraflores</h3>
@@ -158,7 +158,7 @@ function App() {
             </div>
             <div className="property-card">
               <div className="property-image">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local Industrial Lurin" />
+                <img src="/terreno_comercial_lurin.jpeg" alt="Local Industrial Lurin" />
               </div>
               <div className="property-content" style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Local Industrial Lurin</h3>
@@ -166,7 +166,7 @@ function App() {
             </div>
             <div className="property-card">
               <div className="property-image">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casa Surco" />
+                <img src="/casa_surco.jpeg" alt="Casa Surco" />
               </div>
               <div className="property-content" style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', margin: 0, textAlign: 'center' }}>Casa Surco</h3>
